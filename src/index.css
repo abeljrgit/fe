@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-secondary-2 font-commissioner;
+}
+
+.hero__bg {
+  background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 0%, 0.628) 0%,
+      hsla(0, 0%, 0%, 0) 50%
+    ),
+    url("./assets/images/image-hero-desktop.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__bg {
+    background: linear-gradient(
+        180deg,
+        hsla(0, 0%, 0%, 0.628) 0%,
+        hsla(0, 0%, 0%, 0) 50%
+      ),
+      url("./assets/images/image-hero-mobile.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+
+.section__container {
+  @apply container mx-auto;
+}
+
+.progress {
+  @apply w-full h-3;
+}
+
+.progress::-webkit-progress-bar {
+  @apply bg-secondary-2 rounded-full;
+}
+
+.progress::-webkit-progress-value {
+  @apply bg-primary-1 rounded-full;
+}
+
+.input__number::-webkit-outer-spin-button,
+.input__number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+.scrollbar__thin {
+  scrollbar-width: auto;
+  scrollbar-color: hsl(176, 72%, 28%) #ffffff;
+}
+
+.scrollbar__thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar__thin::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.scrollbar__thin::-webkit-scrollbar-thumb {
+  background-color: hsl(176, 72%, 28%);
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
