@@ -1,7 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply font-roboto bg-roseQuartz;
+  @apply font-manrope bg-veryPaleBlue;
+}
+
+.section-bg {
+  background: url("./assets/images/bg-pattern.svg") no-repeat;
+  background-size: contain;
+  background-position: right top;
+}
+
+.heading-bg {
+  background: url("./assets/images/pattern-circles.svg") no-repeat;
+  background-position: center;
+}
+
+.input-range-container {
+  position: relative;
+  background: hsl(224, 65%, 95%);
+  height: 10px;
+  border-radius: 50px;
+}
+
+.input-range-indicator {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 10px;
+  border-radius: 50px;
+  background-color: hsl(174, 77%, 80%);
+}
+
+.input-range {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.input-range:focus {
+  outline: none;
+}
+
+.input-range::-webkit-slider-runnable-track {
+  /* background: hsl(224, 65%, 95%); */
+  background: transparent;
+  height: 10px;
+  border-radius: 50px;
+}
+
+.input-range::-moz-range-track {
+  /* background: hsl(224, 65%, 95%); */
+  background: transparent;
+  height: 10px;
+  border-radius: 50px;
+}
+
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 500px;
+  margin-top: calc(
+    (10px / 2) - (40px / 2)
+  ); /*(Track height in pixels / 2) - (Thumb height in pixels / 2)*/
+  background: url("./assets/icons/icon-slider.svg") no-repeat,
+    hsl(174, 86%, 45%);
+  background-position: center center;
+  box-shadow: hsla(174, 86%, 45%, 0.604) 0px 7px 29px 0px;
+}
+
+.input-range:focus::-webkit-slider-thumb {
+  border: 1px solid hsl(174, 86%, 45%);
+  outline: 3px solid hsl(174, 86%, 45%);
+  outline-offset: 0.125rem;
+}
+
+.input-range::-moz-range-thumb {
+  border: none;
+  border-radius: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 500px;
+  background: url("./assets/icons/icon-slider.svg") no-repeat,
+    hsl(174, 86%, 45%);
+  background-position: center center;
+  box-shadow: hsla(174, 86%, 45%, 0.604) 0px 7px 29px 0px;
+}
+
+.input-range:focus::-moz-range-thumb {
+  border: 1px solid hsl(174, 86%, 45%);
+  outline: 3px solid hsl(174, 86%, 45%);
+  outline-offset: 0.125rem;
 }

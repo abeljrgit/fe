@@ -1,1 +1,1 @@
-export * from "./BlackPinkCard";
+export * from "./TrafficPricingCard";
